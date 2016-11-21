@@ -7,7 +7,8 @@ import { EmployeeListComponent } from '../employee-list/employee-list.component'
 import { DetailDepartmentComponent } from '../detail-department/detail-department.component';
 
 const routes: Routes = [
-      {path: 'departments', component: DepartmentListComponent},
+      { path: '', pathMatch: 'full', redirectTo: 'departments'},
+      { path: 'departments', component: DepartmentListComponent},
       { path: 'employees', component: EmployeeListComponent},
       { path: 'departments/:id', component: DetailDepartmentComponent}
 ];
